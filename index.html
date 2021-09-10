@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="main.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <button class="newBook">+</button>
+        <div class="bookshelf"></div>
+        <div class="popup">
+            <div class="popup-header">
+                <h1> Add Book</h1>
+                <button class="closeButton">+</button>
+            </div>
+            
+            <form class="form" action="/" method="GET">
+                <label>Title:</label>
+                <input type="text" id="title" placeholder="Book Title" required>
+                <br>
+                <label>Author:</label>
+                <input type="text" id="author" placeholder="Author" required>
+                <br>
+                <label>Number of Pages:</label>
+                <input type="text" id="pages" placeholder="Pages" required>
+                <br>
+                <label>Already Read?</label>
+                <select id="read">
+                    <option Value="Yes">Yes</option>
+                    <option Value="No">No</option>
+                </select>
+                <br>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="overlay"></div>
+    </body>
+</html>

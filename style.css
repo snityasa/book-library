@@ -1,0 +1,65 @@
+.newBook {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 5%;
+    right: 5%;
+    font-size: 1.8rem;
+    border: none;
+    background-color: aquamarine;
+}
+
+.popup-header {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.popup {
+    z-index: 10;
+    background-color: goldenrod;
+    transform: scale(0);
+    max-width: 50%;
+    border: none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    width:400px;  /* adjust as per your needs */
+    height:400px;   /* adjust as per your needs */
+    margin-left:-200px;   /* negative half of width above */
+    margin-top:-200px;   /* negative half of height above */
+}
+
+.overlay {
+    z-index: 5;
+    position: fixed;
+    opacity:0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 6;
+}
+
+.bookshelf {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    width: 200px;
+    height: 300px;
+    border: none;
+}
